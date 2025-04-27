@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="16dp"
+    android:gravity="top">
+
+    <!-- Card containing the weekly usage bar chart -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dashboard"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp">
+
+    </TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDDDDD"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/wrdabovetable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Water Usage"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/waterusagecard"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/Blue2"
+        android:backgroundTint="@color/Blue2"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="179dp"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            android:weightSum="7"
+            android:background="@color/Blue2">
+
+            <!-- For day (Mon to Sun) -->
+            <!-- MONDAY -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="Mon"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <FrameLayout
+                    android:id="@+id/monbar"
+                    android:layout_width="24dp"
+                    android:layout_height="135dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/white"
+                    android:backgroundTintMode="src_in"
+                    android:clipToOutline="true"
+                    android:elevation="4dp"
+                    android:foregroundGravity="bottom">
+
+                    <!-- Usage (white area) -->
+                    <View
+                        android:id="@+id/mon_usage"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="2dp"
+                        android:background="@color/blue"
+                        android:backgroundTintMode="src_in" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- TUESDAY -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="Tue"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <FrameLayout
+                    android:id="@+id/tuebar"
+                    android:layout_width="24dp"
+                    android:layout_height="135dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/white"
+                    android:clipToOutline="true"
+                    android:elevation="4dp">
+
+                    <View
+                        android:id="@+id/tue_usage"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="2dp"
+                        android:background="@color/blue" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- WEDNESDAY -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="Wed"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <FrameLayout
+                    android:id="@+id/wedbar"
+                    android:layout_width="24dp"
+                    android:layout_height="135dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/white"
+                    android:clipToOutline="true"
+                    android:elevation="4dp">
+
+                    <View
+                        android:id="@+id/wed_usage"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="2dp"
+                        android:background="@color/blue" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- THURSDAY -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="Thu"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <FrameLayout
+                    android:id="@+id/thubar"
+                    android:layout_width="24dp"
+                    android:layout_height="135dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/white"
+                    android:clipToOutline="true"
+                    android:elevation="4dp">
+
+                    <View
+                        android:id="@+id/thu_usage"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="2dp"
+                        android:background="@color/blue" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- FRIDAY -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="Fri"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <FrameLayout
+                    android:id="@+id/fribar"
+                    android:layout_width="24dp"
+                    android:layout_height="135dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/white"
+                    android:clipToOutline="true"
+                    android:elevation="4dp">
+
+                    <View
+                        android:id="@+id/fri_usage"
+                        android:layout_width="match_parent"
+                        android:layout_height="132dp"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="2dp"
+                        android:background="@color/blue" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- SATURDAY -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="Sat"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <FrameLayout
+                    android:id="@+id/satbar"
+                    android:layout_width="24dp"
+                    android:layout_height="135dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/white"
+                    android:clipToOutline="true"
+                    android:elevation="4dp">
+
+                    <View
+                        android:id="@+id/sat_usage"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="2dp"
+                        android:background="@color/blue" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- SUNDAY -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="Sun"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <FrameLayout
+                    android:id="@+id/sunbar"
+                    android:layout_width="24dp"
+                    android:layout_height="135dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/white"
+                    android:clipToOutline="true"
+                    android:elevation="4dp">
+
+                    <View
+                        android:id="@+id/sun_usage"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="2dp"
+                        android:background="@color/blue" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Bottom row: This Week + Estimated Price -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="2"
+        android:layout_marginTop="8dp">
+
+        <!-- This Week Progress Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="147dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:id="@+id/this_week_card"
+                android:layout_width="match_parent"
+                android:layout_height="145dp"
+                android:padding="12dp"
+                android:background="@color/Blue2">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="This Week"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/this_week_percentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20%"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="less"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Estimated Price Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/estimated_price_card"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="148dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@color/Blue2">
+
+                <TextView
+                    android:id="@+id/estimated_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Estimated Price"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,159 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frequently Asked Questions"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="12dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DDDDDD"
+                android:layout_marginBottom="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/edit_text_background"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/question1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="How to save water at home?"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:drawableEnd="@drawable/baseline_arrow_drop_down_24"
+                    android:drawablePadding="8dp"
+                    android:padding="8dp" />
+
+                <!--LATER CHECK IF WANNA IMPLEMENT DROPDOWN VERSION like press arrow then answer come down like that-->
+                <TextView
+                    android:id="@+id/answer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🛁 Take shorter showers (aim 5 minutes). \n🚰 Turn off tap when brushing teeth or washing dishes. \n🔧 Fix leaking taps and pipes quickly. \n🚗 Use a pail instead of hose when washing car or floor. \n👕 Wash full laundry loads. \n🌧️ Collect rainwater for garden/cleaning."
+                    android:lineSpacingExtra="4dp"
+                    android:textSize="12sp"
+                    android:padding="8dp"
+                    android:background="@color/blue3"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/edit_text_background"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/question2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="How to reduce monthly water bills?"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:drawableEnd="@drawable/baseline_arrow_drop_down_24"
+                    android:drawablePadding="8dp"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:id="@+id/answer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📉 Monitor usage via water meter. \n💡 Install low-flow taps and showerheads. \n🚱 Reuse greywater for plants or cleaning. \n✅ Apply for rebates on water-saving devices (check SPAN). \n👨‍👩👧 Educate household on saving habits."
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="4dp"
+                    android:padding="8dp"
+                    android:background="@color/blue3"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/edit_text_background"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/question3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="What is recommended water usage"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:drawableEnd="@drawable/baseline_arrow_drop_down_24"
+                    android:drawablePadding="8dp"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:id="@+id/answer3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="👤 Per person: 200–250 liters/day. \n🏠 4-person household: ~25–30 m³/month. \n📊 Keep monthly usage below 35 m³ to avoid higher tariffs. \n🗒️ Check your bill to track usage trends."
+                    android:lineSpacingExtra="4dp"
+                    android:textSize="12sp"
+                    android:padding="8dp"
+                    android:background="@color/blue3"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/edit_text_background"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/question4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Common terms in water conservation"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:drawableEnd="@drawable/baseline_arrow_drop_down_24"
+                    android:drawablePadding="8dp"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:id="@+id/answer4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📍 Water meter is near main pipe/outside home. \n🔢 Black digits = m³, red = liters. \n📏 Usage = current reading – previous. \n💵 1 m³ = 1,000 liters. \n📦 Bill charged per m³ using tiered rates. \n🚿 Greywater = reused water (laundry/sinks). \n🛠️ Non-revenue water = lost before reaching user."
+                    android:lineSpacingExtra="4dp"
+                    android:textSize="12sp"
+                    android:padding="8dp"
+                    android:background="@color/blue3"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
